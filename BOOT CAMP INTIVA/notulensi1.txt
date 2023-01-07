@@ -1,0 +1,6 @@
+notulensi 09/12/2022
+-----
+Tugas :
+Membuat grup WA Back-End
+Membuat tugas kecil-kecil an pada hari senin, rabu, jumat. reference: 30 days challenge php
+Memancing para peserta untuk mengerjakan tugas

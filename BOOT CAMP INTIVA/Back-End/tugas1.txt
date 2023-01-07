@@ -1,0 +1,10 @@
+php
+postgreSQL
+Composer
+Text Editor
+pgAdmin
+
+Pelajari:
+Database, Table beserta Field/Column, Tipe Data, Key
+
+https://www.postgresqltutorial.com

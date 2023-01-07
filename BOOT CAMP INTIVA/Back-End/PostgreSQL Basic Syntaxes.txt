@@ -1,0 +1,92 @@
+-- Tutorial Indonesia
+-- Nasrul Tutorial
+-- https://youtube.com/playlist?list=PLz1-OvnHgSWWsa13GjrSNIKphvird0cLA
+
+-- Data Definition Language (DDL)
+    -- Level Database
+        -- Show Databases
+            \l
+
+        -- Create a Database
+            CREATE DATABASE [nama_database];
+
+        -- Rename a Database
+            ALTER DATABASE [nama_database]
+            RENAME TO [nama_baru_database];
+
+        -- Delete a Database
+            DROP DATABASE [nama_database];
+
+        -- Use or Select a Database
+            \c [nama_database]
+
+    -- Level Table
+        -- Show Tables
+            \dt
+
+        -- Create a Table
+            CREATE TABLE [nama_table] (
+                [nama_field] [tipe_data] [constraint],
+                ...
+            );
+
+        -- Describe a Table
+        \d [nama_table];
+
+        -- Edit a Table
+            ALTER TABLE [nama_table]
+                [actions];
+
+            -- Actions
+                -- Add new field
+                    ADD [nama_field] [tipe_data] [constraint]
+                -- Modify field
+                    -- Rename field
+                        RENAME COLUMN [nama_field]
+                            TO [nama_baru_field]
+                    -- Modify field data type
+                        ALTER COLUMN [nama_field]
+                            TYPE [tipe_data_baru]
+                -- Delete column from table
+                    DROP COLUMN [nama_field]
+
+        -- Delete a Table
+            DROP TABLE [nama_table];
+
+-- <-- -------------------------------------------------------------------------------------------- -->
+
+-- Data Manipulation Language (DML)
+    -- Insert Data
+        INSERT INTO [nama_table] [field_tujuan] VALUES
+            ([data]),
+            ...
+            ;
+
+    -- Show Data
+        -- Without Condition
+            SELECT [field(s)] FROM [nama_table];
+        -- With Condition(s)
+            SELECT [field(s)] FROM [nama_table]
+                WHERE [nama_field] [operator] [data];
+        -- Order Data
+            SELECT [field(s)] FROM [nama_table]
+                ORDER BY [nama_field] [ASC/DESC];
+        -- Limit Output Data
+            SELECT [field(s)] FROM [nama_table]
+                LIMIT [berapa];
+        -- Grouping Data
+            SELECT [field(s)] FROM [nama_table]
+                GROUP BY [nama_field];
+
+    -- Edit Data
+        -- Without Condition
+            UPDATE [nama_table]
+                SET [nama_field] = [data_baru]
+        -- With Condition
+            UPDATE [nama_table]
+                SET [nama_field] = [data_baru]
+                WHERE [nama_field] = [data];
+
+    -- Delete data
+        DELETE FROM [nama_table]
+            WHERE [nama_field] = [data];
