@@ -1,5 +1,6 @@
-<?php
-    $source = [
+<?php 
+
+$source = [
 	[
 		"name" => "Terry Medhurst", 
 		"age" => 50, 
@@ -152,65 +153,41 @@
 	] 
 ]; 
 
-$i = 1;
-echo "jumlah data adalah ", count($source);
-echo "<br>";
-echo "<br>";
+// Buatlah syntax code dari nomor-nomor di bawah ini:
 
-$i = 1;
-foreach($source as $sc){
-	echo $i, ". Saya ", $sc["name"], " berumur ", $sc["age"], ". Saya berkuliah di ", $sc["university"];
-	echo "<br>";
-	$i++;
-}
+/**
+* Nomor 1
+*
+* Tampilkan jumlah total data di atas.
+*/
 
-echo "<br>";
-echo "<br>";
-echo "Umur < 30";
-echo "<br>";
-echo "<br>";
+/**
+ * Nomor 2
+ * 
+ * Tampilkan semua data $source di atas dengan format string:
+ * Saya $name berumur $age. Saya berkuliah di $university.
+ */
 
-$i = 0;
-foreach($source as $sc){
-	if($sc["age"] < 30){
-		echo $i, ". Saya ", $sc["name"], " berumur ", $sc["age"], ". Saya berkuliah di ", $sc["university"];
-		echo "<br>";
-		$i++;
-	}
-}
+/**
+* Nomor 3
+*
+* Tampilkan semua data yang hanya berumur kurang dari 30 tahun dengan format string
+* Saya $name berumur $age. Saya berkuliah di $university.
+*/
 
-$sum = 0;
-foreach($source as $sc){
-	$sum = $sum + $sc["age"];
-}
+/**
+* Nomor 4
+*
+* Tampilkan rata-rata umur dari semua data di atas.
+*/
 
-$avg = $sum / count($source);
-
-echo "<br>";
-echo "<br>";
-echo "Rata rata umur nya adalah ", $avg;
-echo "<br>";
-echo "<br>";
-
-$total_less = 0;
-$total_more = 0;
-foreach($source as $sc){
-	if($sc["age"] <= 30){
-		$total_less = $total_less + $sc["age"] + 7;
-	}else if($sc["age"] >= 30){
-		$total_more = $total_more + $sc["age"] + 10;
-	}
-}
-
-echo "Hasil pengolahan umur <= 30 adalah $total_less";
-echo "<br>";
-echo "Hasil pengolahan umur > 30 adalah $total_more";
-echo "<br>";
-echo "<br>";
-
-
-
-
-
-
-?>
+/**
+* Nomor 5
+*
+* Buat berdasarkan kondisi di bawah ini:
+* - Jika berumur kurang dari atau sama dengan 30 tahun, maka tambah dengan angka 7 kemudian jumlahkan semua;
+* - Jika berumur lebih dari 30 tahun maka kurangi dengan angka 10 kemudian jumlahkan semua;
+* Tampilkan dengan format string:
+* - Hasil pengolahan umur <= 30 adalah $total_age
+* - Hasil pengolahan umur > 30 adalah $total_age
+*/
