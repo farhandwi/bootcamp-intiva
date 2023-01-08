@@ -152,10 +152,64 @@
 	] 
 ]; 
 
+$i = 1;
+echo "jumlah data adalah ", count($source);
+echo "<br>";
+echo "<br>";
+
+$i = 1;
+foreach($source as $sc){
+	echo $i, ". Saya ", $sc["name"], " berumur ", $sc["age"], ". Saya berkuliah di ", $sc["university"];
+	echo "<br>";
+	$i++;
+}
+
+echo "<br>";
+echo "<br>";
+echo "Umur < 30";
+echo "<br>";
+echo "<br>";
+
 $i = 0;
 foreach($source as $sc){
-    $i++;
+	if($sc["age"] < 30){
+		echo $i, ". Saya ", $sc["name"], " berumur ", $sc["age"], ". Saya berkuliah di ", $sc["university"];
+		echo "<br>";
+		$i++;
+	}
 }
+
+$sum = 0;
+foreach($source as $sc){
+	$sum = $sum + $sc["age"];
+}
+
+$avg = $sum / count($source);
+
+echo "<br>";
+echo "<br>";
+echo "Rata rata umur nya adalah ", $avg;
+echo "<br>";
+echo "<br>";
+
+$total_age = 0;
+foreach($source as $sc){
+	if($sc["age"] <= 30){
+		$total_age = $total_age + $sc["age"] + 7;
+	}else if($sc["age"] >= 30){
+		$total_age = $total_age + $sc["age"] + 10;
+	}
+}
+
+echo "Hasil pengolahan umur <= 30 adalah $total_age";
+echo "<br>";
+echo "Hasil pengolahan umur > 30 adalah $total_age";
+echo "<br>";
+echo "<br>";
+
+
+
+
 
 
 ?>
