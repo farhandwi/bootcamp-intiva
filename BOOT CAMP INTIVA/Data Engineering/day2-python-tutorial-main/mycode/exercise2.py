@@ -1,0 +1,5 @@
+message = input("What do you want me to say? ")
+upper = message.upper()
+print(upper, "!!!")
+print(upper, "!!!")
+print(upper, "!!!")

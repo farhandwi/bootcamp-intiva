@@ -150,15 +150,14 @@
 		"age" => 31, 
 		"university" => "Poznan School of Banking" 
 	] 
-]; 
+];
 
-$i = 1;
 echo "jumlah data adalah ", count($source);
 echo "<br>";
 echo "<br>";
 
-$i = 1;
-foreach($source as $sc){
+foreach($source as $i => $sc){
+	$i++;
 	echo $i, ". Saya ", $sc["name"], " berumur ", $sc["age"], ". Saya berkuliah di ", $sc["university"];
 	echo "<br>";
 	$i++;
@@ -170,8 +169,7 @@ echo "Umur < 30";
 echo "<br>";
 echo "<br>";
 
-$i = 0;
-foreach($source as $sc){
+foreach($source as $i => $sc){
 	if($sc["age"] < 30){
 		echo $i, ". Saya ", $sc["name"], " berumur ", $sc["age"], ". Saya berkuliah di ", $sc["university"];
 		echo "<br>";
